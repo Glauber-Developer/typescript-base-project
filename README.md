@@ -1,4 +1,4 @@
-# Sistema de Folha de Ponto
+# Configuration Project for TypeScript
 
 Este é um projeto base desenvolvido com as configurações inicias do **TypeScript**, utilizando **ECMA2023**, **Nodemon**, **@types/node**, **ts-node**, configuração base para o **tsconfig.json** para gerenciamento de tráfego.
 
@@ -23,8 +23,7 @@ Este é um projeto base desenvolvido com as configurações inicias do **TypeScr
     ```bash
     npm init -y
 
-
-    ![alt text](image.png)
+![alt text](image.png)
 
 4. Adicione o TypeScript localmente ao novo projeto (dessa forma você pode trabalhar com versões diferentes em cada projeto, sem entrar em conflito com uma instalação global) através do seguinte comando (a opção de instalação indica que o TypeScript é uma dependência de tempo de desenvolvimento que não afetará dependência de tempo de execução/produção do projeto):
     ```bash
@@ -32,7 +31,7 @@ Este é um projeto base desenvolvido com as configurações inicias do **TypeScr
     ou
     npm install typescript --save-dev
 
-    ![alt text](image-1.png)
+![alt text](image-1.png)
 
 5. Observe as alterações efetuadas no arquivo “package.json” e a criação do subdiretório “node_modules” com os pacotes do TypeScript.
 
@@ -40,13 +39,13 @@ Este é um projeto base desenvolvido com as configurações inicias do **TypeScr
     ```bash
     npx tsc -v
 
-    ![alt text](image-2.png)
+![alt text](image-2.png)
 
 7. Acrescente um arquivo “tsconfig.json” com as opções de compilação do TypeSript através do comando:
     ```bash
     npx tsc --init
 
-    ![alt text](image-3.png)
+![alt text](image-3.png)
 
 8. Abra o arquivo “tsconfig.json” e observe todas as opções disponíveis. Realize as seguintes alterações:
     •	Troque a opção "target" para "es2022"
@@ -60,7 +59,7 @@ Este é um projeto base desenvolvido com as configurações inicias do **TypeScr
     "include": ["src/**/*"],
     "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 
-    ![alt text](image-4.png)
+![alt text](image-4.png)
 
 Observação: alternativamente, utilize um arquivo de configuração base já padronizado para diversos ambientes de desenvolvimento de acordo com a documentação disponível em https://www.typescriptlang.org/docs/handbook/tsconfig-json.html 
 
@@ -70,7 +69,7 @@ Observação: alternativamente, utilize um arquivo de configuração base já pa
     ou
     npm install ts-node --save-dev
 
-    ![alt text](image-5.png)
+![alt text](image-5.png)
 
 10. Adicione o arquivo de definição de tipos TypeScript (arquivos “*.d.ts” serão instalados no diretório “node_modules/@types”) para a biblioteca do Node através do seguinte comando:
     ```bash
@@ -78,7 +77,7 @@ Observação: alternativamente, utilize um arquivo de configuração base já pa
     ou
     npm install @types/node --save-dev
 
-    ![alt text](image-6.png)
+![alt text](image-6.png)
 
 11. Instale o nodemon (https://nodemon.io/) para automatizar o processo de compilação a cada alteração de arquivo-fonte via o comando:
     ```bash
@@ -86,7 +85,7 @@ Observação: alternativamente, utilize um arquivo de configuração base já pa
     ou
     npm install nodemon --save-dev
 
-    ![alt text](image-7.png)
+![alt text](image-7.png)
 
 12. Abra o arquivo “package.json” e localize a seção “scripts”. Iremos alterar essa seção para configurar os comandos de compilação e execução do projeto via NPM. O resultado desejado será dois comandos para executar a aplicação “index” em modo de desenvolvimento e de produção:
     •	“npm run dev” para iniciar a aplicação em modo de desenvolvedor com nodemon habilitado; nesse ambiente, qualquer alteração no código-fonte da aplicação será automaticamente refletido em uma nova execução.
